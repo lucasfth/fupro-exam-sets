@@ -1,0 +1,63 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/jebe/OneDrive - ITU/teaching/courses/FP2021/ReExam/FPExam2021_2/FPExam2021/FPExam2021/FPExam2021.fsproj": {}
+  },
+  "projects": {
+    "/Users/jebe/OneDrive - ITU/teaching/courses/FP2021/ReExam/FPExam2021_2/FPExam2021/FPExam2021/FPExam2021.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jebe/OneDrive - ITU/teaching/courses/FP2021/ReExam/FPExam2021_2/FPExam2021/FPExam2021/FPExam2021.fsproj",
+        "projectName": "FPExam2021",
+        "projectPath": "/Users/jebe/OneDrive - ITU/teaching/courses/FP2021/ReExam/FPExam2021_2/FPExam2021/FPExam2021/FPExam2021.fsproj",
+        "packagesPath": "/Users/jebe/.nuget/packages/",
+        "outputPath": "/Users/jebe/OneDrive - ITU/teaching/courses/FP2021/ReExam/FPExam2021_2/FPExam2021/FPExam2021/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jebe/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/jesper-bengtson/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "FSharp.Core": {
+              "target": "Package",
+              "version": "[5.0.0, )",
+              "generatePathProperty": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
