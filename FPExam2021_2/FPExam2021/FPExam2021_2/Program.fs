@@ -18,7 +18,12 @@ let testQ2 () =
 
 let testQ3 () =
     printfn "Testing Question 3"
-    // place debug prints for Q3 here
+    printfn ""
+    printfn "%A" (solveQuadratic "-4x^2 - 5x + 6 = 0" 5)
+    printfn "%A" (solveQuadratic "-4x^2 - 5x+ 6= 0" 5)
+    printfn "%A" (solveQuadratic "-4x^2-5x+6=0" 5)
+    printfn "%A" (solveQuadratic "-4x^3 - 5x + 6 = 0" 5)
+    printfn "%A" (solveQuadratic "-4x^2 - 5x + 6 = 0 Hello World" 5)
     ()
 
 let testQ4 () =
@@ -28,5 +33,5 @@ let testQ4 () =
 
 [<EntryPoint>]
 let main argv =
-    testQ1 ()
+    testQ3 ()
     0 // return an integer exit code

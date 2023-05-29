@@ -230,20 +230,18 @@ let barTail lst =
 
 (* Question 3.1 *)
 
-let approxSquare x num : float =
+let approxSquare x num =
     let rec aux prev step =
-
         match step with
         | 0 -> prev
         | _ -> aux ((float x / prev + prev) / 2.0) (step - 1)
-    // | _ -> aux ((float x / prev + prev) / (2: float)) (step - 1)
+
+    let csq = float (int (sqrt (float (x / 2 * 2))))
 
     if num = 0 then
-        float (x / 2)
+        csq
     else
-        // printfn "half - %A and whole %A" (float (x / 2 * 2)) x
-        aux (sqrt (float (x / 2 * 2))) num
-
+        aux ((float x / csq + csq) / 2.0) (num - 1)
 
 (* Question 3.2 *)
 
@@ -257,34 +255,78 @@ let quadratic a b c num =
 
     ((-bf + square) / (2.0 * af)), ((-bf - square) / (2.0 * af))
 
-// (approxSquare (int ((-bf + sqrt (bf * bf - 4.0 * af * cf)) / (2.0 * af))) num,
-//  approxSquare (int ((-bf - sqrt (bf * bf - 4.0 * af * cf)) / (2.0 * af))) num)
-
 (* Question 3.3 *)
 
-let parQuadratic _ = failwith "not implemented"
+let parQuadratic egs numProcesses num =
+    List.splitInto numProcesses egs
+    |> List.map (fun egs ->
+        async { return List.fold (fun acc (a, b, c) -> acc @ [ quadratic a b c num ]) List.Empty egs })
+    |> Async.Parallel
+    |> Async.RunSynchronously
+    |> Array.fold (fun acc r -> acc @ r) []
 
 (* Question 3.4 *)
 
-let solveQuadratic _ = failwith "not implemented"
+open JParsec.TextParser
+
+let whitespaceChar = satisfy System.Char.IsWhiteSpace
+let spaces = many whitespaceChar
+let (.>*>.) p1 p2 = p1 .>> spaces .>>. p2
+let (.>*>) p1 p2 = p1 .>> spaces .>> p2
+let (>*>.) p1 p2 = p1 .>> spaces >>. p2
+let operator = pchar '+' <|> pchar '-'
+
+let solveQuadratic str num =
+    let str' = str + "\n"
+
+    let parser =
+        pint32 .>> pstring "x^2" .>*>. operator .>*>. pint32 .>> pstring "x"
+        .>*>. operator
+        .>*>. pint32
+        .>*> pchar '='
+        .>*> pchar '0'
+        .>> pstring "\n"
+
+    let result = run parser str'
+    let ((((a, op1), b), op2), c) = getSuccess result
+    let b' = if op1 = '-' then -b else b
+    let c' = if op2 = '-' then -c else c
+    quadratic a b' c' num
 
 (* 4: Rational numbers *)
 
 (* Question 4.1 *)
 
-type rat = unit (* replace this entire type with your own *)
+type rat = (int * int) (* replace this entire type with your own *)
 
 (* Question 4.2 *)
 
-let mkRat _ = failwith "not implemented"
-let ratToString _ = failwith "not implemented"
+let rec gcd x y = if y = 0 then x else gcd y (x % y)
+
+let mkRat n d =
+    let x = gcd n d
+
+    match (n / x, d / x) with
+    | _, 0 -> None
+    | (a', b') when a' < 0 && b' < 0 -> Some(-a', -b')
+    | (a', b') when a' < 0 || b' < 0 -> Some(-a', abs b')
+    | (a', b') -> Some(a', b')
+
+let ratToString ((a: int), (b: int)) = string a + " / " + string b
 
 (* Question 4.3 *)
 
-let plus _ = failwith "not implemented"
-let minus _ = failwith "not implemented"
-let mult _ = failwith "not implemented"
-let div _ = failwith "not implemented"
+let plus r1 r2 =
+    mkRat (fst r1 * snd r2 + snd r1 * fst r2) (snd r1 * snd r2)
+
+let minus r1 r2 =
+    mkRat (fst r1 * snd r2 - snd r1 * fst r2) (snd r1 * snd r2)
+
+let mult r1 r2 =
+    mkRat (fst r1 * fst r2) (snd r1 * snd r2)
+
+let div r1 r2 =
+    mkRat (fst r1 * snd r2) (snd r1 * fst r2)
 
 (* Question 4.4 *)
 
@@ -303,10 +345,29 @@ let (>>=) m f = bind m f
 let (>>>=) m n = m >>= (fun () -> n)
 let evalSM (SM f) s = f s
 
-let smPlus _ = failwith "not implemented"
-let smMinus _ = failwith "not implemented"
-let smMult _ = failwith "not implemented"
-let smDiv _ = failwith "not implemented"
+let smPlus r =
+    SM(fun st ->
+        match plus st r with
+        | None -> None
+        | Some r -> Some((), r))
+
+let smMinus r =
+    SM(fun st ->
+        match minus st r with
+        | None -> None
+        | Some r -> Some((), r))
+
+let smMult r =
+    SM(fun st ->
+        match mult st r with
+        | None -> None
+        | Some r -> Some((), r))
+
+let smDiv r =
+    SM(fun st ->
+        match div st r with
+        | None -> None
+        | Some r -> Some((), r))
 
 (* Question 4.5 *)
 
@@ -323,4 +384,7 @@ type StateBuilder() =
 
 let state = new StateBuilder()
 
-let calculate _ = failwith "not implemented"
+let rec calculate lst =
+    match lst with
+    | [] -> ret ()
+    | (r, f) :: xs -> f r >>>= calculate xs

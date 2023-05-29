@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/jebe/ownCloud/teaching/courses/FP2020/ReExam/FPExam2020_2/FPExam2020/FPExam2020/FPExam2020.fsproj": {}
+  },
+  "projects": {
+    "/Users/jebe/ownCloud/teaching/courses/FP2020/ReExam/FPExam2020_2/FPExam2020/FPExam2020/FPExam2020.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jebe/ownCloud/teaching/courses/FP2020/ReExam/FPExam2020_2/FPExam2020/FPExam2020/FPExam2020.fsproj",
+        "projectName": "FPExam2020",
+        "projectPath": "/Users/jebe/ownCloud/teaching/courses/FP2020/ReExam/FPExam2020_2/FPExam2020/FPExam2020/FPExam2020.fsproj",
+        "packagesPath": "/Users/jebe/.nuget/packages/",
+        "outputPath": "/Users/jebe/ownCloud/teaching/courses/FP2020/ReExam/FPExam2020_2/FPExam2020/FPExam2020/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jebe/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "FSharp.Core": {
+              "target": "Package",
+              "version": "[4.7.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
