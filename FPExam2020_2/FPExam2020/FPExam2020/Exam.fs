@@ -324,7 +324,11 @@ let cons (x: 'a) (ll: 'a llist) : 'a llist = Cons(fun () -> (x, ll))
 
 (* Question 4.2 *)
 
-let init _ = failwith "not implemented"
+let rec init (f: int -> 'a) : 'a llist = // Does not work
+    let rec generateList n =
+        Cons(fun () -> (f n, generateList (n + 1)))
+
+    generateList 0
 
 (* Question 4.3 *)
 
