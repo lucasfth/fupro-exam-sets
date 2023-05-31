@@ -230,7 +230,7 @@ let print (m: matrix) =
 let failDimensions m1 m2 =
     failwith (
         sprintf
-            "Invalid matrix dimensions: m1 rows = %A, m1 columns = %A, m2 roms = %A, m2 columns = %A"
+            "Invalid matrix dimensions: m1 rows = %A, m1 columns = %A, m2 rows = %A, m2 columns = %A"
             (numRows m1)
             (numCols m1)
             (numRows m2)
@@ -333,6 +333,8 @@ let (>>=) x f = bind f x
 let (>>>=) x y = x >>= (fun _ -> y)
 
 let evalSM (SM f) = f (emptyStack ())
+
+// -------------- Is correct until here --------------
 
 let push _ = failwith "not implemented"
 let pop _ = failwith "not implemented"

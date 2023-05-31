@@ -1,0 +1,4 @@
+/Users/lucasfreytorreshanson/Desktop/code/fupro-exam-sets/FPExam2020_2/FPExam2020/FPExam2020/obj/Debug/netcoreapp2.1/FPExam2020_2.fsproj.AssemblyReference.cache
+/Users/lucasfreytorreshanson/Desktop/code/fupro-exam-sets/FPExam2020_2/FPExam2020/FPExam2020/obj/Debug/netcoreapp2.1/FPExam2020_2.AssemblyInfoInputs.cache
+/Users/lucasfreytorreshanson/Desktop/code/fupro-exam-sets/FPExam2020_2/FPExam2020/FPExam2020/obj/Debug/netcoreapp2.1/FPExam2020_2.AssemblyInfo.fs
+/Users/lucasfreytorreshanson/Desktop/code/fupro-exam-sets/FPExam2020_2/FPExam2020/FPExam2020/obj/Debug/netcoreapp2.1/FPExam2020_2.fsproj.CoreCompileInputs.cache

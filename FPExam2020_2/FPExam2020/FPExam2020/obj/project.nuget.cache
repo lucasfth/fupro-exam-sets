@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "bS/fUnDoRGqLikO2tyNDVk4Ag5F1430Bnv0stCAWENK/Y+mfM5fD5L2DA0GlMdt0lfHgXYSFcuXfZ2Pfcap+IA==",
+  "dgSpecHash": "EgnsAXoCslhwlnaiMrgZQ2ovY4zaucXJIDuyump7h6TrQCPz9zxLJVEAEZnWTD99CNVNbufwSWaPv0gG+uyamA==",
   "success": true,
-  "projectFilePath": "/Users/jebe/ownCloud/teaching/courses/FP2020/ReExam/FPExam2020_2/FPExam2020/FPExam2020/FPExam2020_2.fsproj",
+  "projectFilePath": "/Users/lucasfreytorreshanson/Desktop/code/fupro-exam-sets/FPExam2020_2/FPExam2020/FPExam2020/FPExam2020_2.fsproj",
   "expectedPackageFiles": [
-    "/Users/jebe/.nuget/packages/fsharp.core/4.7.1/fsharp.core.4.7.1.nupkg.sha512",
-    "/Users/jebe/.nuget/packages/microsoft.netcore.app/2.1.0/microsoft.netcore.app.2.1.0.nupkg.sha512",
-    "/Users/jebe/.nuget/packages/microsoft.netcore.dotnetapphost/2.1.0/microsoft.netcore.dotnetapphost.2.1.0.nupkg.sha512",
-    "/Users/jebe/.nuget/packages/microsoft.netcore.dotnethostpolicy/2.1.0/microsoft.netcore.dotnethostpolicy.2.1.0.nupkg.sha512",
-    "/Users/jebe/.nuget/packages/microsoft.netcore.dotnethostresolver/2.1.0/microsoft.netcore.dotnethostresolver.2.1.0.nupkg.sha512",
-    "/Users/jebe/.nuget/packages/microsoft.netcore.platforms/2.1.0/microsoft.netcore.platforms.2.1.0.nupkg.sha512",
-    "/Users/jebe/.nuget/packages/microsoft.netcore.targets/2.1.0/microsoft.netcore.targets.2.1.0.nupkg.sha512",
-    "/Users/jebe/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+    "/Users/lucasfreytorreshanson/.nuget/packages/fsharp.core/4.7.1/fsharp.core.4.7.1.nupkg.sha512",
+    "/Users/lucasfreytorreshanson/.nuget/packages/microsoft.netcore.app/2.1.0/microsoft.netcore.app.2.1.0.nupkg.sha512",
+    "/Users/lucasfreytorreshanson/.nuget/packages/microsoft.netcore.dotnetapphost/2.1.0/microsoft.netcore.dotnetapphost.2.1.0.nupkg.sha512",
+    "/Users/lucasfreytorreshanson/.nuget/packages/microsoft.netcore.dotnethostpolicy/2.1.0/microsoft.netcore.dotnethostpolicy.2.1.0.nupkg.sha512",
+    "/Users/lucasfreytorreshanson/.nuget/packages/microsoft.netcore.dotnethostresolver/2.1.0/microsoft.netcore.dotnethostresolver.2.1.0.nupkg.sha512",
+    "/Users/lucasfreytorreshanson/.nuget/packages/microsoft.netcore.platforms/2.1.0/microsoft.netcore.platforms.2.1.0.nupkg.sha512",
+    "/Users/lucasfreytorreshanson/.nuget/packages/microsoft.netcore.targets/2.1.0/microsoft.netcore.targets.2.1.0.nupkg.sha512",
+    "/Users/lucasfreytorreshanson/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

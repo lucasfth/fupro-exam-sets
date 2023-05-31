@@ -1,45 +1,51 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jebe/ownCloud/teaching/courses/FP2020/ReExam/FPExam2020_2/FPExam2020/FPExam2020/FPExam2020_2.fsproj": {}
+    "/Users/lucasfreytorreshanson/Desktop/code/fupro-exam-sets/FPExam2020_2/FPExam2020/FPExam2020/FPExam2020_2.fsproj": {}
   },
   "projects": {
-    "/Users/jebe/ownCloud/teaching/courses/FP2020/ReExam/FPExam2020_2/FPExam2020/FPExam2020/FPExam2020_2.fsproj": {
+    "/Users/lucasfreytorreshanson/Desktop/code/fupro-exam-sets/FPExam2020_2/FPExam2020/FPExam2020/FPExam2020_2.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jebe/ownCloud/teaching/courses/FP2020/ReExam/FPExam2020_2/FPExam2020/FPExam2020/FPExam2020_2.fsproj",
+        "projectUniqueName": "/Users/lucasfreytorreshanson/Desktop/code/fupro-exam-sets/FPExam2020_2/FPExam2020/FPExam2020/FPExam2020_2.fsproj",
         "projectName": "FPExam2020_2",
-        "projectPath": "/Users/jebe/ownCloud/teaching/courses/FP2020/ReExam/FPExam2020_2/FPExam2020/FPExam2020/FPExam2020_2.fsproj",
-        "packagesPath": "/Users/jebe/.nuget/packages/",
-        "outputPath": "/Users/jebe/ownCloud/teaching/courses/FP2020/ReExam/FPExam2020_2/FPExam2020/FPExam2020/obj/",
+        "projectPath": "/Users/lucasfreytorreshanson/Desktop/code/fupro-exam-sets/FPExam2020_2/FPExam2020/FPExam2020/FPExam2020_2.fsproj",
+        "packagesPath": "/Users/lucasfreytorreshanson/.nuget/packages/",
+        "outputPath": "/Users/lucasfreytorreshanson/Desktop/code/fupro-exam-sets/FPExam2020_2/FPExam2020/FPExam2020/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/jebe/.config/NuGet/NuGet.Config"
+          "/Users/lucasfreytorreshanson/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
         ],
         "sources": {
+          "/usr/local/share/dotnet/sdk/7.0.203/FSharp/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
             "projectReferences": {}
           }
         }
       },
       "frameworks": {
         "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
           "dependencies": {
             "FSharp.Core": {
+              "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[4.7.1, )"
+              "version": "[4.7.1, )",
+              "generatePathProperty": true
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
-              "autoReferenced": true
+              "autoReferenced": true,
+              "generatePathProperty": true
             }
           },
           "imports": [
@@ -48,11 +54,12 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.302/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
         }
       }
     }

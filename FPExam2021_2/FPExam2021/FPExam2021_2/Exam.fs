@@ -40,8 +40,8 @@ let split lst =
     let rec aux lst c1acc c2acc =
         match lst with
         | Nil -> (c1acc, c2acc)
-        | Cons1(elem, tail) -> aux tail (elem :: c1acc) c2acc
-        | Cons2(elem, tail) -> aux tail c1acc (elem :: c2acc)
+        | Cons1(elem, tail) -> aux tail (c1acc @ [ elem ]) c2acc
+        | Cons2(elem, tail) -> aux tail c1acc (c2acc @ [ elem ])
 
     aux lst [] []
 
@@ -205,14 +205,14 @@ let foo2 xs ys =
 (* Question 2.5 *)
 
 let fooTail l1 l2 =
-    let rec aux l1 l2 acc =
+    let rec aux l1 l2 c =
         match l1, l2 with
-        | [], ys -> acc @ ys
-        | xs, [] -> acc @ xs
-        | x :: xs, y :: _ when x < y -> aux xs l2 (acc @ [ x ])
-        | _, y :: ys -> aux l1 ys (acc @ [ y ])
+        | [], ys -> c ys
+        | xs, [] -> c xs
+        | x :: xs, y :: ys when x < y -> aux xs l2 (fun r -> c (x :: r))
+        | x :: xs, y :: ys -> aux l1 ys (fun r -> c (y :: r))
 
-    aux l1 l2 []
+    aux l1 l2 id
 
 (* Question 2.6 *)
 
@@ -242,6 +242,16 @@ let approxSquare x num =
         csq
     else
         aux ((float x / csq + csq) / 2.0) (num - 1)
+
+// Answer by TA since my answer is not fully correct
+// let approxSquare a =
+//         let af = float a
+//         let rec aux b =
+//             function
+//             | 0 -> b
+//             | x -> aux ((b + (af / b)) / 2.0) (x - 1)
+
+//         aux (float (closestSquare a))
 
 (* Question 3.2 *)
 
