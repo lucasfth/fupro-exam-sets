@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "LZ42jnemtOqUa5cAilgtyQe4e3g8eFXDXYNN6iwv0prmAyuwnJk4A7l7uY4rjDp484C669D0fczeAtltqdwJjw==",
+  "success": true,
+  "projectFilePath": "/Users/lucasfreytorreshanson/Desktop/code/fupro-exam-sets/FPExam2021/FPExam2021/FPExam2021/FPExam2021.fsproj",
+  "expectedPackageFiles": [
+    "/Users/lucasfreytorreshanson/.nuget/packages/fsharp.core/7.0.200/fsharp.core.7.0.200.nupkg.sha512",
+    "/Users/lucasfreytorreshanson/.nuget/packages/microsoft.netcore.app.ref/5.0.0/microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "/Users/lucasfreytorreshanson/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "/Users/lucasfreytorreshanson/.nuget/packages/microsoft.netcore.app.host.osx-x64/5.0.17/microsoft.netcore.app.host.osx-x64.5.0.17.nupkg.sha512"
+  ],
+  "logs": []
+}
