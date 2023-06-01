@@ -230,7 +230,7 @@ let barTail lst =
 
 (* Question 3.1 *)
 
-let approxSquare x num =
+let approxSquare x num = // nearly correct
     let rec aux prev step =
         match step with
         | 0 -> prev

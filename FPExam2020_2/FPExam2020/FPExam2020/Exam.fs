@@ -321,10 +321,9 @@ let step (ll: 'a llist) =
 
 let cons (x: 'a) (ll: 'a llist) : 'a llist = Cons(fun () -> (x, ll))
 
-
 (* Question 4.2 *)
 
-let rec init (f: int -> 'a) : 'a llist = // Does not work
+let rec init (f: int -> 'a) : 'a llist = // Does not work did not do more
     let rec generateList n =
         Cons(fun () -> (f n, generateList (n + 1)))
 
