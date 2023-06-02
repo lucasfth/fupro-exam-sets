@@ -405,7 +405,7 @@ let peek (ring: ring<'a>) =
     | (_ :: _, b :: _) -> Some(b)
     | _ -> None
 
-let pop (ring: ring<'a>) : (ring<'a>) option =
+let pop (ring: ring<'a>) : (ring<'a>) option = // `option.Get` to get the ring
     match ring with
     | ([], []) -> None
     | (a, []) -> Some(List.empty, a |> List.rev |> List.tail)
